@@ -10,7 +10,7 @@ function Main(){
     const getWeather = async () => {
         const res = await fetch(`https://goweather.herokuapp.com/weather/${info}`)
         const data = await res.json()
-        setWeather(data)
+        setWeather(data) 
     }
 
     return(
