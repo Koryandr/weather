@@ -15,21 +15,31 @@ function Main(){
 
     return(
         <div>
-            <h1>Weather App</h1>
-            <input
-            placeholder="Search city"
-            value={info}
-            onChange={change}
-            ></input>
-            <button
-            onClick={getWeather}
-            >Search</button>
+            <div className="app-name">
+                <h1 className="main-text">Weather App</h1>
+                <img className="logo" src="Group48.png"/>
+            </div>
+
+            <div className="search-box">
+                <button className="search-btn" onClick={getWeather}>
+                    <img src="iconsearch.png" alt="search" className="search-icon" />
+                </button>
+                <input
+                    placeholder="Search location..."
+                    value={info}
+                    onChange={change}
+                    onKeyDown={(e) => e.key === "Enter" && getWeather()}
+                />
+            </div>
+
+        <br/>
 
             {weather && (
-                <div>
-                    <p>Температура: {weather.temperature}</p>
-                    <p>Ветер: {weather.wind}</p>
-                    <p>Описание: {weather.description}</p>
+                <div className="result">
+                    <p className="City">{info}</p>
+                    <p className="Temperature">{weather.temperature}</p>
+                    <p className="Window">Ветер: {weather.wind}</p>
+                    <p className="Info">Описание: {weather.description}</p>
                 </div>
             )}
 
