@@ -1,7 +1,16 @@
-body{
-    background-color: rgba(30, 30, 30, 1);
-    padding: 20px;
+html, body {
+    height: 100%;
+    margin: 0;
 }
+
+body {
+    background: linear-gradient(to bottom right, rgba(30, 30, 30, 1), black);
+    background-attachment: fixed; /* чтобы тянулось на весь экран */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0; /* убери отступы, лучше их задать отдельным контейнерам */
+}
+
 
 .main-text{
     color: white;
@@ -86,5 +95,5 @@ body{
     width: 300px;
     margin: 0 auto;
     border: 1px solid rgba(173, 54, 203, 1);
-    background-color: rgba(173, 54, 203, 1);
+    background: linear-gradient(to bottom right, rgba(173, 54, 203, 1), black);
 }
